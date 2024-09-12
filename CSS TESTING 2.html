@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM - Governance & Execution Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f9 30%, #e0eafc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: gradientAnimation 15s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Title Styling */
+        h1 {
+            color: #004d99;
+            margin-top: 50px;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Make each letter individually react to hover */
+        h1 span {
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        h1 span:hover {
+            color: #ffcc00;
+        }
+
+        .centered-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .centered-link a {
+            text-decoration: none;
+            color: white;
+            background-color: #004d99;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-link a:hover {
+            background-color: #ffcc00;
+            color: #004d99;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main container to keep all sections aligned */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure 1.0 and 5.0 boxes have the same behavior as others */
+        .content-center, .content-wrap div {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect to pop-out boxes */
+        .content-center:hover, .content-wrap div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text hover color change */
+        .content-center:hover h2, .content-wrap div:hover h2 {
+            color: #ffcc00;
+        }
+
+        /* Flexbox for the middle section (2.0, 3.0, 4.0) */
+        .content-wrap {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .content-wrap div {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        h2 {
+            color: #004d99;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .related {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 40px 0;
+            color: #333;
+        }
+
+        /* Category titles for Ownership, Execution, and Oversight */
+        .category-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #004d99;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Adding a subtle background difference for sections */
+        .ownership-section, .execution-section, .oversight-section {
+            padding: 10px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .ownership-section {
+            background-color: #e8f1fa;
+        }
+
+        .execution-section {
+            background-color: #f2f7fc;
+        }
+
+        .oversight-section {
+            background-color: #e8f1fa;
+        }
+    </style>
+
+    <script>
+        /* JavaScript to make the entire box clickable */
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.content-center:first-of-type').addEventListener('click', function () {
+                window.location.href = 'theway.html'; /* Page for 1.0 section */
+            });
+
+            document.querySelectorAll('.content-wrap div').forEach(function (box, index) {
+                box.addEventListener('click', function () {
+                    if (index === 0) window.location.href = 'planning.html'; /* Page for 2.0 */
+                    if (index === 1) window.location.href = 'performance.html'; /* Page for 3.0 */
+                    if (index === 2) window.location.href = 'people.html'; /* Page for 4.0 */
+                });
+            });
+
+            document.querySelector('.content-center:last-of-type').addEventListener('click', function () {
+                window.location.href = 'compliance.html'; /* Page for 5.0 section */
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>
+        <span>G</span>
+        <span>o</span>
+        <span>v</span>
+        <span>e</span>
+        <span>r</span>
+        <span>n</span>
+        <span>a</span>
+        <span>n</span>
+        <span>c</span>
+        <span>e</span>
+        &nbsp;
+        <span>&</span>
+        &nbsp;
+        <span>E</span>
+        <span>x</span>
+        <span>e</span>
+        <span>c</span>
+        <span>u</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+        &nbsp;
+        <span>M</span>
+        <span>o</span>
+        <span>d</span>
+        <span>e</span>
+        <span>l</span>
+    </h1>
+
+    <div class="centered-link">
+        <a href="https://google.com" target="_blank" rel="noopener noreferrer">View Updated Documents</a>
+    </div>
+
+    <div class="main-container">
+        <!-- Ownership Section -->
+        <div class="ownership-section">
+            <div class="category-title">Ownership</div>
+            <div class="content-center">
+                <h2>1.0 THE WAY</h2>
+                <p>Overview of Governance and Execution Model</p>
+            </div>
+        </div>
+
+        <!-- Execution Section -->
+        <div class="execution-section">
+            <div class="category-title">Execution</div>
+            <div class="content-wrap">
+                <div class="content-editable">
+                    <h2>2.0 Integrated Planning and Corporate Development</h2>
+                    <p>Overview of Integrated Planning and Corporate Development</p>
+                </div>
+
+                <div class="content-editable">
+                    <h2>3.0 Program Performance</h2>
+                    <p>Overview of Program Performance</p>
+                </div>
+
+                <div class="content-editable">
+                    <h2>4.0 People</h2>
+                    <p>Overview of People</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oversight/Assurance Section -->
+        <div class="oversight-section">
+            <div class="category-title">Oversight / Assurance</div>
+            <div class="content-center">
+                <h2>5.0 Compliance & Conduct</h2>
+                <p>Overview of Compliance & Conduct</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <strong>Related Sub-Policy(ies)</strong>
+        </div>
+
+        <div class="related">
+            <strong>Name | COE/Unit Issuing | CoreProcess | Original Date of Issue | Revised/Reviewed | Document Manager</strong>
+        </div>
+    </div>
+
+</body>
+</html>
